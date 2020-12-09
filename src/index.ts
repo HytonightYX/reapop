@@ -16,28 +16,28 @@ import {Theme} from './themes/types'
 import {setUpNotifications} from './services/notifications'
 
 export {
-    // themes
-    baseTheme,
-    atalhoTheme,
-    wyboTheme,
-    bootstrapTheme,
-    // utils
-    setUpNotifications,
-    useNotifications,
-    // constants
-    STATUSES,
-    POSITIONS,
-    //reducers
-    reducer,
-    // actions
-    notify,
-    dismissNotifications,
-    dismissNotification,
-    // components
-    FadeTransition,
-    SlideTransition,
-    GrowTransition,
-    NotificationsProvider,
+  // themes
+  baseTheme,
+  atalhoTheme,
+  wyboTheme,
+  bootstrapTheme,
+  // utils
+  setUpNotifications,
+  useNotifications,
+  // constants
+  STATUSES,
+  POSITIONS,
+  //reducers
+  reducer,
+  // actions
+  notify,
+  dismissNotifications,
+  dismissNotification,
+  // components
+  FadeTransition,
+  SlideTransition,
+  GrowTransition,
+  NotificationsProvider,
 }
 
 // types

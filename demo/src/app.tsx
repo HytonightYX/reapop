@@ -11,24 +11,24 @@ import {setUpNotifications} from '../../src'
 
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(
-    combineReducers({
-        notifications: notificationsReducer(),
-    }),
-    composeEnhancers()
+  combineReducers({
+    notifications: notificationsReducer(),
+  }),
+  composeEnhancers()
 )
 
 setUpNotifications({
-    defaultProps: {
-        position: POSITIONS.topRight,
-        dismissible: true,
-        allowHTML: true,
-    },
+  defaultProps: {
+    position: POSITIONS.topRight,
+    dismissible: true,
+    allowHTML: true,
+  },
 })
 
 const App = hot(() => (
-    <Provider store={store}>
-        <Demo />
-    </Provider>
+  <Provider store={store}>
+    <Demo />
+  </Provider>
 ))
 
 render(<App />, document.getElementById('root'))

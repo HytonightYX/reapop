@@ -6,9 +6,9 @@ import GrowTransition from '../components/GrowTransition'
 import FadeTransition from '../components/FadeTransition'
 
 export type ComponentContextType = {
-    Transition?: typeof SlideTransition | typeof GrowTransition | typeof FadeTransition
-    NotificationIcon?: typeof NotificationIcon
-    Notification?: typeof Notification
+  Transition?: typeof SlideTransition | typeof GrowTransition | typeof FadeTransition
+  NotificationIcon?: typeof NotificationIcon
+  Notification?: typeof Notification
 }
 
 export const ComponentsContext = createContext<ComponentContextType>({})

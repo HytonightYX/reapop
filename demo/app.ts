@@ -10,9 +10,9 @@ const port = process.env.PORT || 3000
 const compiler = webpack(webpackConfig)
 
 app.use(
-    webpackDevMiddleware(compiler, {
-        publicPath: (webpackConfig.output as Output).publicPath as string,
-    })
+  webpackDevMiddleware(compiler, {
+    publicPath: (webpackConfig.output as Output).publicPath as string,
+  })
 )
 app.use(webpackHotMiddleware(compiler))
 
@@ -21,9 +21,9 @@ app.use('/static', express.static(path.join(__dirname, '/src/static')))
 
 // Send `index.html` file for all other routes.
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/src/index.html'))
+  res.sendFile(path.join(__dirname, '/src/index.html'))
 })
 app.set('port', port)
 app.listen(app.get('port'), () => {
-    console.log(`Demo available at http://localhost:${port}`)
+  console.log(`Demo available at http://localhost:${port}`)
 })

@@ -9,14 +9,11 @@
     "check-style": "eslint . --quiet --ext .ts,.tsx,.js,.jsx",
     "lint": "npm run check-style -- --fix",
     "prepublish": "tsdx build",
-    "start": "ts-node demo/app.ts",
-    "test": "npm run check-style && npx jest",
-    "test:coverage": "npm test -- --coverage",
-    "test:watch": "npm test -- --watch"
+    "start": "ts-node demo/app.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://LouisBarranqueiro@github.com/LouisBarranqueiro/reapop.git"
+    "url": "git+https://github.com/HytonightYX/reapop"
   },
   "keywords": [
     "reapop",
@@ -32,9 +29,9 @@
   "author": "Louis Barranqueiro",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LouisBarranqueiro/reapop/issues"
+    "url": "https://github.com/HytonightYX/reapop/issues"
   },
-  "homepage": "https://github.com/LouisBarranqueiro/reapop#readme",
+  "homepage": "https://github.com/HytonightYX/reapop#readme",
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0"
   },
@@ -81,9 +78,6 @@
     "eslint-plugin-standard": "4.1.0",
     "express": "4.17.1",
     "file-loader": "5.1.0",
-    "husky": "4.3.5",
-    "jest": "25.5.4",
-    "jest-cli": "26.6.3",
     "lint-staged": "10.5.3",
     "node-sass": "4.14.1",
     "prettier": "2.2.1",

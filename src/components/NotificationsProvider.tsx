@@ -6,21 +6,21 @@ import {dismissNotification, dismissNotifications, notify} from '../reducers/not
 import {ReapopNotificationsContext} from '../contexts/reapopNotificationsContext'
 
 type Props = {
-    children: ReactNode
+  children: ReactNode
 }
 
 export const NotificationsProvider = (props: Props) => {
-    const [notifications, dispatch] = useReducer(notificationsReducer(), [])
-    const context = {
-        notifications,
-        notify: (notification: NewNotification) => {
-            const action = notify(notification)
-            dispatch(action)
-            return action.payload
-        },
-        dismissNotification: (id: string) => dispatch(dismissNotification(id)),
-        dismissNotifications: () => dispatch(dismissNotifications()),
-    }
+  const [notifications, dispatch] = useReducer(notificationsReducer(), [])
+  const context = {
+    notifications,
+    notify: (notification: NewNotification) => {
+      const action = notify(notification)
+      dispatch(action)
+      return action.payload
+    },
+    dismissNotification: (id: string) => dispatch(dismissNotification(id)),
+    dismissNotifications: () => dispatch(dismissNotifications()),
+  }
 
-    return <ReapopNotificationsContext.Provider value={context}>{props.children}</ReapopNotificationsContext.Provider>
+  return <ReapopNotificationsContext.Provider value={context}>{props.children}</ReapopNotificationsContext.Provider>
 }
